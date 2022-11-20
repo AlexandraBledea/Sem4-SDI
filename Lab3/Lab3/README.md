@@ -1,3 +1,15 @@
+# Requirements
+
+- continue to work in the same teams from Lab 2 and on the same repository
+
+- add DB repositories; the DB repositories will directly implement the Repository interface from the example, i.e., the DB repositories will not extend the InMemoryRepository; see the documentation of each function from the Repository interface - the implementations MUST be semantically the same; you may use any RDBMS except Microsoft SQLServer
+
+- use feature branches: there should be a default master/main branch, a develop branch, feature branches (one branch for each feature); feature branches start from develop and are merged back into develop.
+
+ 
+
+In order to deliver the lab, submit the link to your github repository. This should only be done by one of the team members.
+
 # Bus Management Application
 ---
 The application is managing some bus companies. Each company has more than one bus. Each bus belongs to one bus company.
