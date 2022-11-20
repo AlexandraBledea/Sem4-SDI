@@ -1,3 +1,4 @@
+# Requirements
 
 - Links to an external site. and work on the generated github repository, on the same problem from the previous lab; only a many-to-many and a one-to-many relationship are needed from the previous lab/problem, the entities that are not involved in these relationships may be dropped
 - implement all crud operations, including operations on the relations, i.e., that involve aggregating data from several related entities
