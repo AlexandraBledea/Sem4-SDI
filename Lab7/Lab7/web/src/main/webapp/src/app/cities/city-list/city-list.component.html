@@ -1,0 +1,59 @@
+<h2 class="category">Cities</h2>
+<div class="crud">
+
+  <section style="float: left; display: inline;">
+    <br>
+    <table class="all-cities">
+      <thead>
+      <th>NAME</th>
+      <th>POPULATION</th>
+      <th> </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let city of cities">
+        <td>{{city.name}}</td>
+        <td>{{city.population}}</td>
+        <td>
+          <button class='btnUpdate' type='button' (click)="onUpdate(city)">Update</button>
+<!--          <button class='btnUpdate' type='button' onclick="location.href='./cities/city-list'" (click)="onUpdate(city)">Update</button>-->
+          <button class='btnDelete' type='button' (click)="onDelete(city.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+    <button class='btnPrevious' type='button' (click)="previous()">Previous</button>
+    <button class='btnNext' type='button' (click)="next()">Next</button>
+  </section>
+
+  <section id="add_form" style="float: left; display: block; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <input id="name1" type="text" #newName placeholder="name" style="margin: 5px; width: 191px">
+      Name<br>
+      <input id="population1" type="text" #newPopulation placeholder="population" style="margin: 5px; width: 191px">
+      Population<br>
+      <button id="submitAddBtn" style="margin-top: 10px" (click)="addCity(newName, newPopulation)">
+        Add new city</button>
+    </form>
+  </section>
+
+  <section id="update_form" style="float: left; display: none; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <input id="name2" type="text" #uName placeholder="name" style="margin: 5px; width: 191px">
+      Name<br>
+      <input id="population2" type="text" #uPopulation placeholder="population" style="margin: 5px; width: 191px">
+      Population<br>
+      <button id="submitUpdateBtn" style="margin-top: 10px" (click)="updateCity(uName, uPopulation)">
+        Update</button>
+    </form>
+  </section>
+</div>
+
+
+
+<!--  <ol class="cities">-->
+<!--    <li *ngFor="let city of cities"-->
+<!--        [class.selected]="city === selectedCity"-->
+<!--        (click) = "onSelect(city)">-->
+<!--      ID: {{city.id}}, Name: {{city.name}}, Population: {{city.population}}-->
+<!--    </li>-->
+<!--  </ol>-->

@@ -1,0 +1,56 @@
+<h2 class="category">Cities</h2>
+<div class="crud">
+
+  <section style="float: left; display: inline;">
+    <br>
+    <table class="all-cities">
+      <thead>
+      <th>NAME</th>
+      <th>CNP</th>
+      <th> </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let driver of drivers">
+        <td>{{driver.name}}</td>
+        <td>{{driver.cnp}}</td>
+        <td>
+          <button class='btnUpdate' type='button' (click)="onUpdate(driver)">Update</button>
+          <button class='btnDelete' type='button' (click)="onDelete(driver.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+    <button class='btnPrevious' type='button' (click)="previous()">Previous</button>
+    <button class='btnNext' type='button' (click)="next()">Next</button>
+  </section>
+
+  <section id="add_form" style="float: left; display: block; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <input id="name1" type="text" #newName placeholder="name" style="margin: 5px; width: 191px">
+      Name<br>
+      <input id="cnp1" type="text" #newCnp placeholder="cnp" style="margin: 5px; width: 191px">
+      CNP<br>
+      <button id="submitAddBtn" style="margin-top: 10px" (click)="addDriver(newName, newCnp)">
+        Add new driver</button>
+    </form>
+  </section>
+
+  <section id="update_form" style="float: left; display: none; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <input id="name2" type="text" #uName placeholder="name" style="margin: 5px; width: 191px">
+      Name<br>
+      <button id="submitUpdateBtn" style="margin-top: 10px" (click)="updateDriver(uName)">
+        Update</button>
+    </form>
+  </section>
+</div>
+
+
+
+<!--  <ol class="cities">-->
+<!--    <li *ngFor="let city of cities"-->
+<!--        [class.selected]="city === selectedCity"-->
+<!--        (click) = "onSelect(city)">-->
+<!--      ID: {{city.id}}, Name: {{city.name}}, Population: {{city.population}}-->
+<!--    </li>-->
+<!--  </ol>-->
