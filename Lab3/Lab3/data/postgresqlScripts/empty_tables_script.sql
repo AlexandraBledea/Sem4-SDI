@@ -1,0 +1,13 @@
+DELETE FROM BusStop;
+DELETE FROM BusStation;
+DELETE FROM City;
+
+DELETE FROM Ticket;
+DELETE FROM Feedback;
+
+DELETE FROM Bus;
+DELETE FROM BusCompany;
+DELETE FROM Driver;
+DELETE FROM Luggage;
+DELETE FROM Passenger;
+DELETE FROM Person;
