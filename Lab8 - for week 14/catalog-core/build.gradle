@@ -1,0 +1,85 @@
+
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+
+    //jpa
+    compile group: 'org.springframework', name: 'spring-context-support', version: "$springVersion"
+    compile group: 'org.springframework', name: 'spring-orm', version: "$springVersion"
+    compile(group: 'org.springframework.data', name: 'spring-data-jpa', version: "$springDataVersion")
+
+    compile group: 'org.hibernate', name: 'hibernate-core', version: "$hibernateVersion"
+    compile group: 'org.hibernate', name: 'hibernate-jpamodelgen', version: "$hibernateVersion"
+    compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: "$hibernateJpa21Version"
+
+    compile group: 'org.postgresql', name: 'postgresql', version: "$postgresqlVersion"
+//    compile group: 'postgresql', name: 'postgresql', version: "$jdbcpostgreSqlVersion"
+    //---
+
+    //    compile group: 'com.google.guava', name: 'guava', version: "$guavaVersion"
+    compile group: 'org.hibernate', name: 'hibernate-jpamodelgen', version: "$hibernateVersion"
+    annotationProcessor group: 'org.hibernate', name: 'hibernate-jpamodelgen', version: "${hibernateVersion}"
+
+
+    compile group: 'org.springframework', name: 'spring-jdbc', version: "$springVersion"
+//    compile group: 'org.postgresql', name: 'postgresql', version: "$postgresqlVersion"
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: "$dbcpVersion"
+
+
+    compile group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: "$caffeineVersion"
+    compile group: 'com.zaxxer', name: 'HikariCP', version: "$hikariVersion"
+
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: "$jaxbapiVersion"
+
+    //dbunit-test-config
+    compile group: 'com.zaxxer', name: 'HikariCP', version: "$hikariVersion"
+    compile group: 'org.dbunit', name: 'dbunit', version: "$dbUnitVersion"
+    compile group: 'com.h2database', name: 'h2', version: "$h2DbVersion"
+    compile group: 'com.github.springtestdbunit', name: 'spring-test-dbunit', version: "$springtestdbunitVersion"
+
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:4.1.2'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:4.1.2'
+
+//    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+//    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+//    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+
+
+}
+
+
+//tasks.withType(JavaCompile) {
+//    options.annotationProcessorGeneratedSourcesDirectory = file("src/main/generated")
+//}
+
+//sourceSets {
+//    generated {
+//        java {
+//            srcDirs = ['src/main/generated']
+//        }
+//    }
+//}
+
+//dependencies {
+//    compile group: 'org.springframework', name: 'spring-context-support', version: "$springVersion"
+//    compile group: 'org.springframework', name: 'spring-orm', version: "$springVersion"
+//    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: "$springDataVersion"
+//
+//    compile group: 'org.hibernate', name: 'hibernate-core', version: "$hibernateVersion"
+//    compile group: 'org.hibernate', name: 'hibernate-jpamodelgen', version: "$hibernateVersion"
+//    compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: "$hibernateJpa21Version"
+//
+////    compile group: 'postgresql', name: 'postgresql', version: "$postgreSqlVersion"
+//    compile group: 'org.postgresql', name: 'postgresql', version: "$postgreSqlVersion"
+//
+//
+////    compile group: 'com.google.guava', name: 'guava', version: "$guavaVersion"
+//    compile group: 'org.hibernate', name: 'hibernate-jpamodelgen', version: "$hibernateVersion"
+//    annotationProcessor group: 'org.hibernate', name: 'hibernate-jpamodelgen', version: "${hibernateVersion}"
+//
+//    //dbunit-test-config
+//    compile group: 'com.zaxxer', name: 'HikariCP', version: "$hikariVersion"
+//    compile group: 'org.dbunit', name: 'dbunit', version: "$dbUnitVersion"
+//    compile group: 'com.h2database', name: 'h2', version: "$h2DbVersion"
+//    compile group: 'com.github.springtestdbunit', name: 'spring-test-dbunit', version: "$springtestdbunitVersion"
+//}

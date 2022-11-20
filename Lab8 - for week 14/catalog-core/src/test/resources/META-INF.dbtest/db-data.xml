@@ -1,0 +1,23 @@
+<dataset>
+    <City id="11" name="Cluj" population="1000" />
+    <City id="12" name="Arad" population="2000" />
+    <City id="13" name="Iasi" population="3000" />
+    <City id="14" name="Timisoara" population="4000" />
+
+    <Driver id="11" name="Ana" cnp="123" />
+    <Driver id="12" name="Cosmin" cnp="321" />
+    <Driver id="13" name="Marius" cnp="456" />
+    <Driver id="14" name="Mihaela" cnp="768" />
+
+    <Bus id="11" modelname="Audi" fuel="benzina" capacity="100" driverid="11" />
+    <Bus id="12" modelname="Seat" fuel="motorina" capacity="50" driverid="12" />
+    <Bus id="13" modelname="BMW" fuel="benzina" capacity="30" driverid="13" />
+
+    <BusStation id="11" name="Memo" cityid="11" />
+    <BusStation id="12" name="Sora" cityid="12" />
+    <BusStation id="13" name="Eco" cityid="13" />
+
+    <BusStop busid="11" stationid="12" stoptime="11:30" />
+    <BusStop busid="12" stationid="11" stoptime="16:30" />
+    <BusStop busid="13" stationid="13" stoptime="09:30" />
+</dataset>

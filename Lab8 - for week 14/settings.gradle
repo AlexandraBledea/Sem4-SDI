@@ -1,0 +1,4 @@
+rootProject.name = 'AngularProject'
+include 'catalog-core'
+include 'catalog-web'
+

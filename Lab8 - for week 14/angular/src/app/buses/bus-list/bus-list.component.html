@@ -1,0 +1,88 @@
+<h2 class="category">Buses</h2>
+<div class="crud">
+
+  <section style="float: left; display: inline;">
+    <br>
+    <table class="all-cities">
+      <thead>
+      <th>MODEL NAME</th>
+      <th>FUEL</th>
+      <th>CAPACITY</th>
+      <th>DRIVER NAME</th>
+      <th> </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let bus of buses">
+        <td (click)="displayStops(bus.id)">{{bus.modelName}} </td>
+        <td>{{bus.fuel}}</td>
+        <td>{{bus.capacity}}</td>
+        <td>{{bus.driver.name}}</td>
+        <td>
+          <button class='btnUpdate' type='button' (click)="onUpdate(bus)">Update</button>
+          <button class='btnDelete' type='button' (click)="onDelete(bus.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+  </section>
+
+  <section style="float: left; display: block; padding-left: 50px; padding-top: 40px">
+    <form action="" method="">
+      <button id="submitSortBtn" style="margin-top: 10px" (click)="sortBusesByCapacity()">Sort by capacity</button><br>
+      <button id="refreshBtn" style="margin-top: 10px" (click)="refreshTable()">Refresh table</button>
+    </form>
+  </section>
+
+  <section id="add_form" style="float: left; display: block; padding-left: 50px; padding-top: 40px">
+    <form action="" method="">
+      <input id="modelName1" type="text" #newModelName placeholder="modelName" style="margin: 5px; width: 191px">
+      Model Name<br>
+      <input id="fuel1" type="text" #newFuel placeholder="fuel" style="margin: 5px; width: 191px">
+      Fuel<br>
+      <input id="capacity1" type="text" #newCapacity placeholder="capacity" style="margin: 5px; width: 191px">
+      Capacity<br>
+      <select name="Severity Filter" [(ngModel)]="selectedOption" (click)="setDriver()">
+        <option>choose driver</option>
+        <option *ngFor = "let driver of drivers">
+          {{driver.name + "," + driver.cnp}}
+        </option>
+      </select>
+      <button id="submitAddBtn" style="margin-top: 10px" (click)="addBus(newModelName, newFuel, newCapacity)">
+        Add new bus</button>
+    </form>
+  </section>
+
+  <section id="update_form" style="float: left; display: none; padding-left: 50px; padding-top: 40px">
+    <form action="" method="">
+      <input id="modelName2" type="text" #uModelName placeholder="modelName" style="margin: 5px; width: 191px">
+      Model Name<br>
+      <input id="fuel2" type="text" #uFuel placeholder="fuel" style="margin: 5px; width: 191px">
+      Fuel<br>
+      <input id="capacity2" type="text" #uCapacity placeholder="capacity" style="margin: 5px; width: 191px">
+      Capacity<br>
+      <button id="submitUpdateBtn" style="margin-top: 10px" (click)="updateBus(uModelName, uFuel, uCapacity)">
+        Update</button>
+    </form>
+  </section>
+
+  <section style="float: left; display: block; padding-left: 50px; padding-top: 40px">
+  </section>
+
+  <section style="float: left; display: inline;">
+    <br>
+    <table class="all-buses">
+      <thead>
+      <th>STATION NAME</th>
+      <th>STOP TIME</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let stop of stops">
+        <td>{{stop.busStation.name}}</td>
+        <td>{{stop.stopTime}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+

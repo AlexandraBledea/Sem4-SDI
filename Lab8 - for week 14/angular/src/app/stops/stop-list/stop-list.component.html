@@ -1,0 +1,75 @@
+<h2 class="category">Bus stops</h2>
+<div class="crud">
+
+  <section style="float: left; display: inline;">
+    <br>
+    <table class="all-stops">
+      <thead>
+      <th>BUS MODEL</th>
+      <th>STATION NAME</th>
+      <th>STOP TIME</th>
+      <th> </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let stop of stops">
+        <td>{{stop.bus.modelName}}</td>
+        <td>{{stop.busStation.name}}</td>
+        <td>{{stop.stopTime}}</td>
+        <td>
+          <button class='btnUpdate' type='button' (click)="onUpdate(stop)">Update</button>
+          <button class='btnDelete' type='button' (click)="onDelete(stop.bus.id, stop.busStation.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+  </section>
+
+  <section id="add_form" style="float: left; display: block; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <label>
+        Bus
+      </label>
+      <br>
+      <select name="Severity Filter" [(ngModel)]="selectedBus" (click)="setBus()">
+        <option>choose bus</option>
+        <option *ngFor = "let bus of buses">
+          {{bus.modelName}}
+        </option>
+      </select>
+      <br>
+      <label>
+        Station
+      </label>
+      <br>
+      <select name="Severity Filter" [(ngModel)]="selectedStation" (click)="setStation()">
+        <option>choose station</option>
+        <option *ngFor = "let station of stations">
+          {{station.name}}
+        </option>
+      </select>
+      <input id="stopTime1" type="text" #newStopTime placeholder="stopTime" style="margin: 5px; width: 191px">
+      StopTime<br>
+      <button id="submitAddBtn" style="margin-top: 10px" (click)="addStop(newStopTime)">
+        Add new bus stop</button>
+    </form>
+  </section>
+
+  <section id="update_form" style="float: left; display: none; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <input id="stopTime2" type="text" #uStopTime placeholder="stopTime" style="margin: 5px; width: 191px">
+      Stop Time<br>
+      <button id="submitUpdateBtn" style="margin-top: 10px" (click)="updateStop(uStopTime)">
+        Update</button>
+    </form>
+  </section>
+</div>
+
+
+
+<!--  <ol class="cities">-->
+<!--    <li *ngFor="let city of cities"-->
+<!--        [class.selected]="city === selectedCity"-->
+<!--        (click) = "onSelect(city)">-->
+<!--      ID: {{city.id}}, Name: {{city.name}}, Population: {{city.population}}-->
+<!--    </li>-->
+<!--  </ol>-->

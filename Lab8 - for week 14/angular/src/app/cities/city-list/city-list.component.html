@@ -1,0 +1,84 @@
+<h2 class="category">Cities</h2>
+<div class="crud">
+
+  <section style="float: left; display: inline;">
+    <br>
+    <table class="all-cities">
+      <thead>
+      <th>NAME</th>
+      <th>POPULATION</th>
+      <th> </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let city of cities">
+        <td (click)="displayStations(city.id)">{{city.name}}</td>
+        <td>{{city.population}}</td>
+        <td>
+          <button class='btnUpdate' type='button' (click)="onUpdate(city)">Update</button>
+          <button class='btnDelete' type='button' (click)="onDelete(city.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+  </section>
+
+  <section id="add_form" style="float: left; display: block; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <input id="name1" type="text" #newName placeholder="name" style="margin: 5px; width: 191px">
+      Name<br>
+      <input id="population1" type="text" #newPopulation placeholder="population" style="margin: 5px; width: 191px">
+      Population<br>
+      <button id="submitAddBtn" style="margin-top: 10px" (click)="addCity(newName, newPopulation)">
+        Add new city</button>
+    </form>
+  </section>
+
+  <section id="update_form" style="float: left; display: none; padding-left: 50px; padding-top: 40px">
+    <form action="" method="get">
+      <input id="name2" type="text" #uName placeholder="name" style="margin: 5px; width: 191px">
+      Name<br>
+      <input id="population2" type="text" #uPopulation placeholder="population" style="margin: 5px; width: 191px">
+      Population<br>
+      <button id="submitUpdateBtn" style="margin-top: 10px" (click)="updateCity(uName, uPopulation)">
+        Update</button>
+    </form>
+  </section>
+
+
+  <section style="float: left; display: inline; padding-left: 50px">
+    <br>
+    <table class="all-buses">
+      <thead>
+      <th>STATION NAME</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let station of stations">
+        <td (click)="displayStops(station.id)">{{station.name}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="float: left; display: inline; padding-left: 50px">
+    <br>
+    <table class="all-buses">
+      <thead>
+      <th>STOP TIME</th>
+      <th>MODEL NAME</th>
+      <th>BUS CAPACITY</th>
+      <th>DRIVER NAME</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let stop of stops">
+        <td>{{stop.stopTime}}</td>
+        <td>{{stop.bus.modelName}}</td>
+        <td>{{stop.bus.capacity}}</td>
+        <td>{{stop.bus.driver.name}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+
