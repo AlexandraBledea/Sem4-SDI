@@ -1,3 +1,17 @@
+# Requirements
+
+- continue to work in the same teams from Lab 2 and on the same repository
+
+- persistence in XML using DOM or SAX
+
+- the project has to be of type gradle
+
+- use feature branches: there should be a default master/main branch, a develop branch, feature branches (one branch fro each feature); feature branches start from develop and are merged back into develop.
+
+ 
+
+In order to deliver the lab, submit the link to your github repository. This should only be done by one of the team members.
+
 # Bus Management Application
 ---
 The application is managing some bus companies. Each company has more than one bus. Each bus belongs to one bus company.
